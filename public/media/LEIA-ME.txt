@@ -1,0 +1,7 @@
+Coloque aqui o vídeo da home com o nome: intro.mp4
+
+Recomendado: 8 a 15 segundos, em loop, sem áudio, até ~6 MB, 1280x720 (ou 1920x1080 se ficar leve).
+Para comprimir (ffmpeg):
+ffmpeg -i original.mov -vf "scale=1280:-2" -an -c:v libx264 -crf 28 -preset slow -movflags +faststart intro.mp4
+
+Se o arquivo não existir, o site simplesmente mostra o hero normal (sem quebrar).
